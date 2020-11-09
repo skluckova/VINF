@@ -1,9 +1,10 @@
 import csv
-import json
 import re
-import xml.etree.ElementTree as ET
 from dateutil.parser import *
 from datetime import *
+from pyspark.sql import SparkSession
+from pyspark.sql.types import *
+import pandas
 
 
 def to_csv(dictionary_list):
@@ -73,7 +74,7 @@ def check_primary_regex_birth(text, date_type):
                 birth_date_parsed = 'None'
 
     except Exception as exception:
-        print(exception)
+        # print(exception)
         date_re = re.search(date_type + '.*', text)
         if date_re is not None:
             with open(date_type + ".txt", "a") as myfile:
@@ -84,35 +85,39 @@ def check_primary_regex_birth(text, date_type):
 
     return birth_date_parsed
 
+def map_row(row):
+    text = row.revision.text
+    name = get_name(text)
+    if not name:
+        name = row.title
+
+    try:
+        birth_date_parsed = check_primary_regex_birth(text, "birth_date")
+        death_date_parsed = check_primary_regex_birth(text, "death_date")
+
+    except Exception as exception:
+        birth_date_parsed = 'None'
+        death_date_parsed = 'None'
+        # print(exception)
+
+    return (name, birth_date_parsed, death_date_parsed)
 
 if __name__ == '__main__':
-    dictionary_list = []
-    current_title = ""
-    for event, elem in ET.iterparse("data.xml", events=("start", "end")):
-        if "title" in elem.tag and event == "end":
-            current_title = elem.text
-            elem.clear()
+    spark = SparkSession.builder.getOrCreate()
+    customSchema = StructType([ \
+        StructField("title", StringType(), True),
+        StructField('revision', StructType([
+            StructField('text', StringType(), True),
+        ]))
+    ])
 
-        if "text" in elem.tag and event == "end":
-            name = get_name(elem.text)
-            if not name:
-                name = current_title
-            #print(name)
+    df = spark.read \
+        .format('com.databricks.spark.xml') \
+        .options(rowTag="page") \
+        .load('data.xml', schema=customSchema)
 
-            try:
-                birth_date_parsed = check_primary_regex_birth(elem.text, "birth_date")
-                death_date_parsed = check_primary_regex_birth(elem.text, "death_date")
-
-            except Exception as exception:
-                birth_date_parsed = 'None'
-                death_date_parsed = 'None'
-                print(exception)
-
-            if birth_date_parsed == 'None':
-                elem.clear()
-                continue
-            dictionary_list.append({'name': name, 'birth_date': birth_date_parsed, 'death_date': death_date_parsed})
-            elem.clear()
-
-    # prevod do csv
-    to_csv(dictionary_list)
+    rdd = df.rdd.map(map_row)
+    df2 = rdd.toDF()
+    df_filtered = df2.filter(df2._2 != 'None')
+    # df_filtered.show()
+    df_filtered.toPandas().to_csv("outputSpark.csv")
