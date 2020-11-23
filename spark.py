@@ -8,9 +8,9 @@ import pandas
 
 
 def to_csv(dictionary_list):
-    # prevod do csv
+    # convert to csv
     keys = dictionary_list[0].keys()
-    with open('output.csv', 'w', newline='', encoding="utf-8") as output_file:
+    with open('output/output.csv', 'w', newline='', encoding="utf-8") as output_file:
         dict_writer = csv.DictWriter(output_file, keys)
         dict_writer.writeheader()
         dict_writer.writerows(dictionary_list)
@@ -25,20 +25,37 @@ def get_name(text):
         name = name_split[1].strip()
     else:
         name = ''
-    # odstranenie tagov
+    # delete tags
     cleanr = re.compile('<.*?>')
     name = re.sub(cleanr, '', name)
     return re.sub(r'\W+', ' ', name).strip()
 
 
 def get_year_from_century(birth_date_full):
-    return re.sub('\D', '', birth_date_full) + "00"
+    century = int(re.sub('\D', '', birth_date_full) + "00")
+    century = century - 100
+    return str(century)
+
+
+def check_date_from_category(text, date_type):
+    try:
+        birth_re = re.search('\[\[Category:([0-9]*) '+ date_type, text)
+        if birth_re is not None:
+            birth_re = birth_re.group(1)
+            birth_date_parsed = str(parse(birth_re).date())
+        else:
+            birth_date_parsed = 'None'
+
+    except Exception as exception:
+        return 'None', False
+    return birth_date_parsed, False
 
 
 def check_primary_regex_birth(text, date_type):
-    # regex s | a {{
-    remove_terms = ['C.E.','c.', 'ca.', 'Circa', 'circa', 'CE', 'BC', 'After', 'C.', 'C ', 'baptized', '<','>', 'about', '[[circa|c.]]', '[[Vedic period]]', '?', '[[Antwerp]]', '(', ')', 'AH',
-                    'before','[[Av]]', 'BCE', 'late', 'prior to', 'Baptised', 'Early', 'died', 'after', 'early']
+    is_date_correct = False
+    # regex with | and {{
+    remove_terms = ['C.E.', 'ca.', 'Circa', 'circa', 'CE', 'BC', 'After', 'baptized', '<','>', 'about', '[[circa|c.]]', '[[Vedic period]]', '?', '[[Antwerp]]', '(', ')', 'AH',
+                    'before','[[Av]]', 'BCE', 'late', 'prior to', 'Baptised', 'Early', 'died', 'after', 'early', 'c.', 'C.', 'C ']
     try:
         birth_re = re.search(date_type + '.*\{\{(.*)\}\}', text)
         if birth_re is not None:
@@ -48,6 +65,7 @@ def check_primary_regex_birth(text, date_type):
             if birth_date is not None:
                 birth_date = birth_date.group(0).replace('|', ' ')
                 birth_date_parsed = str(parse(birth_date).date())
+                is_date_correct = True
             else:
                 birth_date_parsed = 'None'
         else:
@@ -68,7 +86,7 @@ def check_primary_regex_birth(text, date_type):
                     birth_date_full = get_year_from_century(birth_date_full)
 
                 if not birth_date_full:
-                    return 'None'
+                    return 'None', False
                 birth_date_parsed = str(parse(birth_date_full).date())
             else:
                 birth_date_parsed = 'None'
@@ -81,26 +99,35 @@ def check_primary_regex_birth(text, date_type):
                 myfile.write(get_name(text) + "\n")
                 myfile.write(str(exception) + '\n')
                 myfile.write(date_re.group(0) + "\n\n\n")
-        return 'None'
+        return 'None', False
 
-    return birth_date_parsed
+    return birth_date_parsed, is_date_correct
+
 
 def map_row(row):
+    is_birth_correct = False
+    is_death_correct = False
     text = row.revision.text
-    name = get_name(text)
-    if not name:
-        name = row.title
+    # name = get_name(text)
+    name = row.title
+    # if not name:
+    #     name = row.title
 
     try:
-        birth_date_parsed = check_primary_regex_birth(text, "birth_date")
-        death_date_parsed = check_primary_regex_birth(text, "death_date")
+        birth_date_parsed, is_birth_correct = check_primary_regex_birth(text, "birth_date")
+        death_date_parsed, is_death_correct = check_primary_regex_birth(text, "death_date")
 
     except Exception as exception:
         birth_date_parsed = 'None'
         death_date_parsed = 'None'
         # print(exception)
+    if birth_date_parsed == 'None':
+        birth_date_parsed, is_birth_correct = check_date_from_category(text, 'births')
+    if death_date_parsed == 'None':
+        death_date_parsed, is_death_correct = check_date_from_category(text, 'deaths')
 
-    return (name, birth_date_parsed, death_date_parsed)
+    return (name, birth_date_parsed, death_date_parsed, is_birth_correct, is_death_correct)
+
 
 if __name__ == '__main__':
     spark = SparkSession.builder.getOrCreate()
@@ -114,10 +141,10 @@ if __name__ == '__main__':
     df = spark.read \
         .format('com.databricks.spark.xml') \
         .options(rowTag="page") \
-        .load('data.xml', schema=customSchema)
+        .load('E:\\data-vinf\\enwiki-20200920-pages-articles-multistream.xml', schema=customSchema)
 
     rdd = df.rdd.map(map_row)
     df2 = rdd.toDF()
     df_filtered = df2.filter(df2._2 != 'None')
     # df_filtered.show()
-    df_filtered.toPandas().to_csv("outputSpark.csv")
+    df_filtered.toPandas().to_csv("output/outputSpark1.csv", header = ["Name", "Birth date", "Death date", "Birth note", "Death note"], index=False)
