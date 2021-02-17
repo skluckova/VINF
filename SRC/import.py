@@ -43,3 +43,5 @@ if __name__ == '__main__':
     # print('response:', response)
 
     csv_reader('../output/outputSpark1.csv', es)
+
+    # print("Done")
