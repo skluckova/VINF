@@ -10,7 +10,7 @@ import pandas
 def to_csv(dictionary_list):
     # convert to csv
     keys = dictionary_list[0].keys()
-    with open('output/output.csv', 'w', newline='', encoding="utf-8") as output_file:
+    with open('../output/output.csv', 'w', newline='', encoding="utf-8") as output_file:
         dict_writer = csv.DictWriter(output_file, keys)
         dict_writer.writeheader()
         dict_writer.writerows(dictionary_list)
@@ -120,7 +120,7 @@ def map_row(row):
     except Exception as exception:
         birth_date_parsed = 'None'
         death_date_parsed = 'None'
-        # print(exception)
+
     if birth_date_parsed == 'None':
         birth_date_parsed, is_birth_correct = check_date_from_category(text, 'births')
     if death_date_parsed == 'None':
@@ -141,7 +141,7 @@ if __name__ == '__main__':
     df = spark.read \
         .format('com.databricks.spark.xml') \
         .options(rowTag="page") \
-        .load('E:\\data-vinf\\enwiki-20200920-pages-articles-multistream.xml', schema=customSchema)
+        .load('E:\\Data-vinf\\enwiki-20200920-pages-articles-multistream.xml', schema=customSchema)
 
     rdd = df.rdd.map(map_row)
     df2 = rdd.toDF()

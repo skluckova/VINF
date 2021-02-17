@@ -89,7 +89,7 @@ def check_primary_regex_birth(text, date_type):
 if __name__ == '__main__':
     # dictionary_list = []
     # current_title = ""
-    # for event, elem in ET.iterparse("data.xml", events=("start", "end")):
+    # for event, elem in ET.iterparse("Data.xml", events=("start", "end")):
     #     if "title" in elem.tag and event == "end":
     #         current_title = elem.text
     #         elem.clear()

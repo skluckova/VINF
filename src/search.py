@@ -44,18 +44,20 @@ def search(text, es):
 if __name__ == '__main__':
     es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
 
-    name = input("Enter name of first person: ")
-    options_person_one = (search(name, es))
-    print_names(options_person_one)
-    index = input("Enter number of chosen person: ")
-    person_one = (options_person_one[int(index)-1]["_source"])
+    while True:
+        name = input("Enter name of first person: ")
+        options_person_one = (search(name, es))
+        print_names(options_person_one)
+        index = input("Enter number of chosen person: ")
+        person_one = (options_person_one[int(index)-1]["_source"])
 
-    name = input("Enter name of second person: ")
-    options_person_two = (search(name, es))
-    print_names(options_person_two)
-    index = input("Enter number of chosen person: ")
-    person_two = (options_person_two[int(index)-1]["_source"])
+        name = input("Enter name of second person: ")
+        options_person_two = (search(name, es))
+        print_names(options_person_two)
+        index = input("Enter number of chosen person: ")
+        person_two = (options_person_two[int(index)-1]["_source"])
 
-    check_dates(person_one, person_two)
+        check_dates(person_one, person_two)
+        if not input("Press c to continue ") == "c":
+            break
 
-    print("pasocka")
