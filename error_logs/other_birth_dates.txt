@@ -1,0 +1,596 @@
+Hassan Nasrallah
+Unknown string format: | death_place =
+birth_date = {{birth date and age|df=yes|1960|08|31}}
+
+
+Abe no Seimei
+hour must be in 0..23: February 26, 921 A.D.
+birth_date  = February 26, 921 A.D.
+
+
+Obadiah Walker
+Unknown string format:  1699 1616 01
+birth_date                = 1616
+
+
+Hillel the Elder
+Unknown string format: 110 E
+birth_date       = c. 110 BCE
+
+
+Hank <br><small>the Angry Drunken Dwarf</small>
+Unknown string format: age|2001|9|04
+birth_date  = {{Birth date|1962|4|20}}
+
+
+Asher
+Unknown string format: 15 [[Shevat]]
+birth_date         = 15 [[Shevat]]
+
+
+Asher
+Unknown string format: 20 [[Shevat]]
+birth_date         = 15 [[Shevat]]
+
+
+Horemheb
+Unknown string format: 1292&nbsp;
+birth_date     =
+
+
+Xu Huang
+Unknown string format: Unknown
+birth_date = Unknown
+
+
+Zhang Fei
+Unknown string format: Unknown
+birth_date = Unknown<!--DO NOT change the birth date unless you have a reliable source.-->
+
+
+Squanto| image
+Unknown string format: November 1622 [[Old Style|O.S.]]
+birth_date  = {{circa|1585}}
+
+
+Jim Goad
+month must be in 1..12:  41 2002 7
+birth_date  = {{Birth based on age as of date|41|2002|7|2}}<ref name="NYPress1"/><!-- Find a reliable source -->
+
+
+Huang Zhong
+Unknown string format: Unknown
+birth_date = Unknown
+
+
+Mary Jo Kopechne
+unsupported operand type(s) for +: 'int' and 'str'
+birth_date     = {{birth date|1940|7|26|mf=y}}
+
+
+Pharamond
+Unknown string format: 430 65 years old
+birth_date         = 365
+
+
+Old Tom Parr
+Unknown string format:  152 1635 
+birth_date         = {{circa|{{Birth based on age at death|df=yes|152|1635||11}}}} (reputedly)
+
+
+The Lord Giddens
+month must be in 1..12:  1967 31 8
+birth_date         = {{birth date and age|1938|1|18|df=yes}}
+
+
+Michael David Spivak
+String does not contain a date:    
+birth_date        = {{birth date and age|1940|05|25}}
+
+
+William Cowper Brann
+Unknown string format: April 1, 1898, aged 43
+birth_date  = January 4, 1855
+
+
+Polydore Vergil
+Unknown string format: ''c''.1470
+birth_date                = ''c''.1470
+
+
+Tintoretto
+Unknown string format: early October 1518
+birth_date  = late September or early October 1518
+
+
+Judah Halevi
+Unknown string format: 1141 66 years
+birth_date       = c. 1075
+
+
+Fann Wong
+month must be in 1..12:  1908 31 8
+birth_date = {{birth date and age|df=y|1971|01|27}}
+
+
+Alex Zanardi
+Unknown string format: }}
+birth_date        = {{Birth date and age|1966|10|23|df=y}}
+
+
+Xiahou Yuan
+Unknown string format: Unknown
+birth_date = Unknown
+
+
+Xiahou Ba
+Unknown string format: Unknown
+birth_date = Unknown
+
+
+Maria Monk}}
+Unknown string format:  1849 1816 
+birth_date    = June 27, 1816
+
+
+Abe no Hirafu
+Unknown string format: unknown
+birth_date         =  unknown
+
+
+Abe no Hirafu
+Unknown string format: unknown
+birth_date         =  unknown
+
+
+Hulagu Khan
+month must be in 1..12:  49 1265 02
+birth_date      = {{Birth based on age at death|49|1265|02|08}}
+
+
+Manisha Koirala
+month must be in 1..12:  30 2001 02
+birth_date         = {{birth based on age as of date|30|2001|02|25|df=y}}<ref name="Amna liaquat" />
+
+
+Joanna of Castile
+Unknown string format: 21 February 1462, [[Royal Alcázar of Madrid]], [[Madrid]], Spain.
+birth_date        =21 February 1462, [[Royal Alcázar of Madrid]], [[Madrid]], Spain.
+
+
+Charles Barry Jr.
+Unknown string format: Birth year 17th Oct 1823
+birth_date    = Birth year 17th Oct 1823
+
+
+Charles Barry Jr.
+Unknown string format: age 77
+birth_date    = Birth year 17th Oct 1823
+
+
+John Graham, Viscount Dundee
+Unknown string format: 21 July 1647 estimated
+birth_date    = 21 July 1647 (estimated)
+
+
+Thomas Pennant
+Unknown string format: 14 June O.S. 1726
+birth_date  = 14 June (O.S.) 1726
+
+
+George Mallory
+Unknown string format: 8–9 June 1924
+birth_date  = {{Birth date|1886|6|18|df=y}}
+
+
+Te Rauparaha
+second must be in 0..59: 1760s
+birth_date          = c. 1760s
+
+
+James W. C. Pennington}}
+unsupported operand type(s) for +: 'int' and 'str'
+birth_date     = c. 1807
+
+
+Ælfsige
+Unknown string format: unknown
+birth_date = unknown
+
+
+Michele Reis
+month must be in 1..12:  1908 31 8
+birth_date = {{birth date and age|df=yes|1970|06|20}}
+
+
+Julia Soaemias
+Unknown string format: March 11, [[222 AD]]
+birth_date   = 180 AD
+
+
+Dong Zhuo
+Unknown string format: Unknown
+birth_date = Unknown
+
+
+Orio Mastropiero
+Unknown string format: Unknown
+birth_date       = Unknown
+
+
+Dong Xi
+Unknown string format: Unknown
+birth_date = Unknown
+
+
+Chen Wu
+Unknown string format: Unknown
+birth_date = Unknown
+
+
+Xu Sheng
+Unknown string format: Unknown
+birth_date = Unknown
+
+
+Liao Hua
+Unknown string format: Unknown
+birth_date = Unknown
+
+
+Wei Yan
+Unknown string format: Unknown
+birth_date = Unknown
+
+
+Cleomenes III
+Unknown string format: 265–260
+birth_date   =c. 265–260 BC
+
+
+Maria
+Unknown string format: summer 1192
+birth_date  = summer 1192
+
+
+Webert Sicot
+Unknown string format:  1985 1930 02
+birth_date          = 1930
+
+
+Wu Cheng'en
+String does not contain a date:    
+birth_date  = 1500 or 1505<!--  {{birth date|||}}   -->
+
+
+bring_me |{{cite magazine
+Unknown string format: July 9, 1823 date uncertain
+birth_date   = July 9, 1823 (date uncertain)<!--uncertain instead of circa because we gave no confirmation this is even approximately the right date-->
+
+
+Pietro Ziani
+Unknown string format: Unknown
+birth_date       = Unknown
+
+
+Khaleda Zia
+Unknown string format: See [[#Birth date discrepancy|Birth date discrepancy]]
+birth_date          = See [[#Birth date discrepancy|Birth date discrepancy]]<!-- Please do not add birth date. See Birth date discrepancy section below. -->
+
+
+Marocco
+unsupported operand type(s) for +: 'int' and 'str'
+birth_date               = c. 1586
+
+
+Yemelyan Pugachev
+Unknown string format:  1775 1742 
+birth_date  = {{start-date|c. 1742}}
+
+
+King Jeconiah
+Unknown string format: 605 E
+birth_date = c. 615 or 605 BCE
+
+
+Constantine II
+Unknown string format: after February 17, 1129
+birth_date  =
+
+
+Nemours Jean-Baptiste
+Unknown string format:  1985 1918 05
+birth_date          = February 2, 1918
+
+
+Patrick Hannan
+Unknown string format: baptised 26 April 1840
+birth_date     = baptised 26 April 1840 
+
+
+Patrick Hannan
+Unknown string format: 4 November 1925, aged 85
+birth_date     = baptised 26 April 1840 
+
+
+Wilhelm Hieronymus Pachelbel
+Unknown string format: August 29, 1686 baptised
+birth_date    = August 29, 1686 (baptised)
+
+
+Frank Secich
+Unknown string format: [[June 14, 1951]]
+birth_date          = [[June 14, 1951]]
+
+
+Imadaddin Nasimi
+Unknown string format: 1369  approximate
+birth_date = 1369 CE (approximate)
+
+
+Yungchen Lhamo
+second must be in 0..59: 1960s
+birth_date      = 1960s
+
+
+Haing S. Ngor
+unsupported operand type(s) for +: 'int' and 'str'
+birth_date = {{Birth date|1940|03|22}}
+
+
+<div style
+Unknown string format: after 1482
+birth_date           = {{circa|1410-1415}}
+
+
+Sally Yeh
+month must be in 1..12:  1908 31 8
+birth_date = {{Birth date and age|df=y|1961|9|30}}
+
+
+Faisal Abdel Qader Al-Husseini
+Unknown string format: 2001 Age 60
+birth_date  = 1940
+
+
+Isma'il ibn Ja'far
+Unknown string format: [[Islamic calendar|103 ]]brapproximately 722 E
+birth_date = [[Islamic calendar|103 AH]]<br>(approximately 722 C.E)
+
+
+Isma'il ibn Ja'far
+Unknown string format: [[Islamic calendar|138 ]]brapproximately 762 E
+birth_date = [[Islamic calendar|103 AH]]<br>(approximately 722 C.E)
+
+
+Zayd ibn Ali
+Pharnavaz I
+Unknown string format: 329, 326
+birth_date        = 329, 326<ref name="Tmn9">Toumanoff, p. 9</ref> or 311 BC
+
+
+Jack Sheppard
+Unknown string format: baptised 5 March, 4 March 1702
+birth_date         = baptised 5 March, 4 March 1702
+
+
+<div style
+Unknown string format: after 1409
+birth_date           = c. 1350
+
+
+Carel Fabritius
+Unknown string format: baptised 27 February 1622
+birth_date       = baptised 27 February 1622
+
+
+Ian Gibson
+Unknown string format: | death_place =
+birth_date = {{birth date and age|1938|09|26|df=yes}}
+
+
+Carolyn H. Justice
+month must be in 1..12:  1900 0 0
+birth_date = <!-- {{birth date and age|1900|0|0}} --> 
+
+
+Harold Brubaker
+Unknown string format: [[Asheboro, North Carolina]]
+birth_date          = [[Asheboro, North Carolina]]
+
+
+Charles-Marie de La Condamine}}
+Unknown string format: 28 January 1701|death_date = 4 February 1774
+birth_date = 28 January 1701|death_date = 4 February 1774 (age 73)|nationality = French|image = Charles Marie de La Condamine.jpg|caption = La Condamine by [[Charles-Nicolas Cochin]] (1768)  [[Pierre-Philippe Choffard]] (1759)}}
+
+
+Robert Ross
+Unknown string format:  1814 1766 9
+birth_date   = 1766
+
+
+Jacky Cheung
+month must be in 1..12:  1908 31 8
+birth_date         = {{birth date and age|df=yes|1961|7|10}}
+
+
+Venutius
+Unknown string format: Unknown
+birth_date         = c. 1st century AD
+
+
+Samuel Nicholas
+Unknown string format:  1790 1744 8
+birth_date    = {{birth year|1744}}
+
+
+Jehoram
+Unknown string format: 882 E
+birth_date  =  c. 882 BCE
+
+
+Jehoram
+Unknown string format: 842 E
+birth_date  =  c. 882 BCE
+
+
+Chunyu Qiong
+Unknown string format: Unknown
+birth_date = Unknown
+
+
+Xu Shu
+Unknown string format: Unknown
+birth_date = Unknown
+
+
+Xu Shu
+Unknown string format: Unknown
+birth_date = Unknown
+
+
+Han Sui
+Unknown string format: Unknown
+birth_date = Unknown
+
+
+Jürgen Moltmann
+month must be in 1..12:  1908 31 8
+birth_date         = {{birth date and age|1926|4|8|df=yes}}
+
+
+Livilla
+day is out of range for month: AD 31
+birth_date      = 13 BC
+
+
+Jennette Arnold
+String does not contain a date:    
+birth_date = <!-- {{Birth date and age||||df=yes}} -->
+
+
+John Biggs
+String does not contain a date:    
+birth_date = <!-- {{Birth date and age||||df=yes}} -->
+
+
+Valerie Shawcross
+String does not contain a date:    
+birth_date = <!-- {{Birth date and age||||df=yes}} -->
+
+
+Elizabeth Howlett
+String does not contain a date:    
+birth_date = <!-- {{Birth date and age||||df=yes}} -->
+
+
+Ahaziah
+Unknown string format: 841 E
+birth_date =
+
+
+Amaziah
+Unknown string format: 767 E
+birth_date =
+
+
+Andrew Moray
+Unknown string format: sometime in  1297
+birth_date  = 
+
+
+Gaius Flaminius
+Unknown string format: 24 June 217 , April on the [[Julian calendar]]
+birth_date    = c. 275 BC
+
+
+
+Unknown string format: 11 May 1999 at age 65
+birth_date = 1933
+
+
+Dave Attell
+month must be in 1..12:  54 2019 3
+birth_date =  c. {{Birth based on age as of date|54|2019|3|20}}
+
+
+Zacharias Janssen
+Unknown string format: 1585 1580
+birth_date        = 1585 (1580)
+
+
+Zacharias Janssen
+Unknown string format: Given as  1632 sometimes 1638
+birth_date        = 1585 (1580)
+
+
+Sarah Harmer |
+Unknown string format: |
+birth_date            = {{birth date and age|1970|11|12}} |
+
+
+Li Qingzhao
+String does not contain a date:    
+birth_date  = 1084<!--  {{birth date|||}}   -->
+
+
+Josie Ho
+month must be in 1..12:  1908 31 8
+birth_date = {{birth date and age|df=yes|1974|12|26}}
+
+
+Abel
+Unknown string format:  1252 1218 6
+birth_date  = 1218
+
+
+Victorinus
+Unknown string format: early 271
+birth_date      =
+
+
+Muhammad Nizamuddin Auliya
+Unknown string format: Thani 725
+birth_date  = 1238 AD/ 635 AH
+
+
+Charley Patton
+Unknown string format: small
+birth_date = April 1891 <small>(probable)</small>
+
+
+Alexander Stewart
+Unknown string format: Approx. 1343
+birth_date = Approx. 1343
+
+
+Mestwin II of Pomerelia
+Unknown string format: around 1220
+birth_date   =around 1220
+
+
+Seki Takakazu
+Unknown string format: December 5, 1708 [[Gregorian calendar]]
+birth_date = 1642(?)
+
+
+Henry Beaufort
+Unknown string format: 26 November 1401 ''probable''
+birth_date        = 26 November 1401 ''(probable)''
+
+
+Stephen Chow
+month must be in 1..12:  1908 31 8
+birth_date         = {{Birth date and age|df=y|1962|06|22}}
+
+
+Maud
+day is out of range for month: 31
+birth_date={{circa}}1072
+
+
+Aureolus
+Unknown string format: 220–230
+birth_date   = 220–230(?)
+
+

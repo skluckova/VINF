@@ -141,7 +141,7 @@ if __name__ == '__main__':
     df = spark.read \
         .format('com.databricks.spark.xml') \
         .options(rowTag="page") \
-        .load('E:\\Data-vinf\\enwiki-20200920-pages-articles-multistream.xml', schema=customSchema)
+        .load('Data/data_5.xml', schema=customSchema)
 
     rdd = df.rdd.map(map_row)
     df2 = rdd.toDF()
