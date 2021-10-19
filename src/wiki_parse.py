@@ -147,4 +147,4 @@ if __name__ == '__main__':
     df2 = rdd.toDF()
     df_filtered = df2.filter(df2._2 != 'None')
     # df_filtered.show()
-    df_filtered.toPandas().to_csv("output/outputSpark1.csv", header = ["Name", "Birth date", "Death date", "Birth note", "Death note"], index=False)
+    df_filtered.toPandas().to_csv("output/outputSpark33.csv", header = ["Name", "Birth date", "Death date", "Birth note", "Death note"], index=False)

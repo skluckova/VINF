@@ -78,3 +78,83 @@ String does not contain a date:
 death_date       = <!-- {{death date and age|||||||df=y}} -->
 
 
+
+Unknown string format:  1984 1917 
+death_date = {{death year and age|1984|1917|}}
+
+
+
+Unknown string format: [[1831]]
+death_date    = [[1831]] 
+
+
+
+Unknown string format: [[1827]]
+death_date    = [[1827]]
+
+
+Rolf Thorsen
+String does not contain a date:    
+death_date       = <!-- {{death date and age|||||||df=y}} -->
+
+
+Laura of Cordoba
+Unknown string format: [[864]]
+death_date       = [[864]]
+
+
+Gregor Schwartz Bostunitsch
+Unknown string format: unknown
+death_date          = unknown
+
+
+
+Unknown string format: country skiing]]}}
+death_date=September 20, 1986|death_place=[[Östnor]], Sweden|country=Sweden|sport=[[cross-country skiing (sport)|cross-country skiing]]}}
+
+
+Eucharides Painter
+Unknown string format: About 470 E
+death_date    = About 470 BCE
+
+
+Richard Meili
+Unknown string format: 1991|7|5
+death_date        = 1991|7|5
+
+
+Ole Nafstad
+String does not contain a date:    
+death_date       = <!-- {{death date and age||||1946|2|20|df=y}} -->
+
+
+Arne Bergodd
+String does not contain a date:    
+death_date       = <!-- {{death date and age|||||||df=y}} -->
+
+
+Rolf Andreassen
+String does not contain a date:    
+death_date       = <!-- {{death date and age|||||||df=y}} -->
+
+
+
+Unknown string format: 29 January 1979|birth_place=[[Laholm]], [[Sweden]]|birth_name=21 October 1892|image=Alf Ahlberg.JPG|relatives=[[Hakon Ahlberg]] brother|education=[[Lund University]] [[Master of Business Administration|MBA]], [[PhD]]}}
+death_date=29 January 1979|birth_place=[[Laholm]], [[Sweden]]|birth_name=21 October 1892|image=Alf Ahlberg.JPG|relatives=[[Hakon Ahlberg]] (brother)|education=[[Lund University]] ([[Master of Business Administration|MBA]], [[PhD]])}}
+
+
+Fernando Climent
+String does not contain a date:    
+death_date       = <!-- {{death date and age|||||||df=y}} -->
+
+
+
+Unknown string format: 5 May 1275 Aged 51
+death_date  =after 5 May 1275 (Aged 51)
+
+
+Blessed Virgin Mary
+Unknown string format: soul [[Assumption of Mary]]
+death_date      = The Catholic Church teaches that, at the end of her natural life, she was assumed into heaven, body and soul ([[Assumption of Mary]])
+
+

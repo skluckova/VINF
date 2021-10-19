@@ -14,19 +14,19 @@ def check_dates(person_one, person_two):
     birth_date_two = person_two["Birth date"]
     death_date_two = person_two["Death date"]
 
-    if death_date_one is "None":
+    if death_date_one == "None":
         death_date_one = "2022-12-12"
-        print("Death date of ", person_one["Name"] ," might not be correct.")
+        print("Death date of ", person_one["Name"], " might not be correct.")
 
-    if death_date_one is "None":
-        death_date_one = "2022-12-12"
+    if death_date_two == "None":
+        death_date_two = "2022-12-12"
         print("Death date of ", person_two["Name"], " might not be correct.")
 
     if ((birth_date_one <= death_date_two) and (birth_date_two <= death_date_one)):
-        print(person_one["Name"], " and ", person_two["Name"], " could meet. ")
+        print(person_one["Name"], "lived:", birth_date_one, "-", death_date_one, " and ", person_two["Name"], "lived:", birth_date_two, "-", death_date_two, " could meet. ")
 
     else:
-        print(person_one["Name"], " and ", person_two["Name"], " could not meet. ")
+        print(person_one["Name"], "born:", birth_date_one, " and ", person_two["Name"], "born:", birth_date_two, "could not meet.")
 
 
 def search(text, es):
