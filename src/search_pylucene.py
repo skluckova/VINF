@@ -22,10 +22,11 @@ def openCSV(file_name,w):
     with open(file_name, 'r', encoding="utf-8") as outfile:
         reader = csv.DictReader(outfile)
         for dct in reader:
+
             #print(dct)
             addDoc(w, dct["Name"], dct["Birth date"], dct["Death date"], dct["Birth note"], dct["Death note"])
 
-
+            
 def addDoc(w, name,birth_date, death_date,birth_note, death_note):
     doc = Document()
     doc.add(TextField("name", name, Field.Store.YES))
@@ -35,7 +36,7 @@ def addDoc(w, name,birth_date, death_date,birth_note, death_note):
     doc.add(StringField("death_note", death_note, Field.Store.YES))
     w.addDocument(doc)
 
-
+    
 def createIndex():
     print(lucene.VERSION)
     lucene.initVM(vmargs=['-Djava.awt.headless=true'])
@@ -130,3 +131,4 @@ if __name__ == '__main__':
         check_dates(person_one, person_two)
         if not input("Press c to continue ") == "c":
             break
+
