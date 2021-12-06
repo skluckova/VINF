@@ -10,7 +10,7 @@ import pandas
 def to_csv(dictionary_list):
     # convert to csv
     keys = dictionary_list[0].keys()
-    with open('../output/output.csv', 'w', newline='', encoding="utf-8") as output_file:
+    with open('../output/output_3.csv', 'w', newline='', encoding="utf-8") as output_file:
         dict_writer = csv.DictWriter(output_file, keys)
         dict_writer.writeheader()
         dict_writer.writerows(dictionary_list)
@@ -54,9 +54,11 @@ def check_date_from_category(text, date_type):
 def check_primary_regex_birth(text, date_type):
     is_date_correct = False
     # regex with | and {{
+    # regex for special date types
     remove_terms = ['C.E.', 'ca.', 'Circa', 'circa', 'CE', 'BC', 'After', 'baptized', '<','>', 'about', '[[circa|c.]]', '[[Vedic period]]', '?', '[[Antwerp]]', '(', ')', 'AH',
                     'before','[[Av]]', 'BCE', 'late', 'prior to', 'Baptised', 'Early', 'died', 'after', 'early', 'c.', 'C.', 'C ']
     try:
+        # searching for birth date
         birth_re = re.search(date_type + '.*\{\{(.*)\}\}', text)
         if birth_re is not None:
             birth_re = birth_re.group(1)
@@ -92,9 +94,9 @@ def check_primary_regex_birth(text, date_type):
                 birth_date_parsed = 'None'
 
     except Exception as exception:
-        # print(exception)
         date_re = re.search(date_type + '.*', text)
         if date_re is not None:
+            #document with exeptions date types
             with open(date_type + ".txt", "a") as myfile:
                 myfile.write(get_name(text) + "\n")
                 myfile.write(str(exception) + '\n')
@@ -108,10 +110,10 @@ def map_row(row):
     is_birth_correct = False
     is_death_correct = False
     text = row.revision.text
-    # name = get_name(text)
-    name = row.title
-    # if not name:
-    #     name = row.title
+    name = get_name(text)
+    # name = row.title
+    if not name:
+        name = row.title
 
     try:
         birth_date_parsed, is_birth_correct = check_primary_regex_birth(text, "birth_date")
@@ -141,10 +143,11 @@ if __name__ == '__main__':
     df = spark.read \
         .format('com.databricks.spark.xml') \
         .options(rowTag="page") \
-        .load('Data/data_5.xml', schema=customSchema)
+        .load('E:\\enwiki-20200920-pages-articles-multistream.xml', schema=customSchema)
 
     rdd = df.rdd.map(map_row)
     df2 = rdd.toDF()
+    print(df2.count())
     df_filtered = df2.filter(df2._2 != 'None')
-    # df_filtered.show()
-    df_filtered.toPandas().to_csv("output/outputSpark33.csv", header = ["Name", "Birth date", "Death date", "Birth note", "Death note"], index=False)
+    df_filtered.show()
+    df_filtered.toPandas().to_csv("outputSpark_full_name.csv", header = ["Name", "Birth date", "Death date", "Birth note", "Death note"], index=False)
